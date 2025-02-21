@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  
+
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+    />   
+<meta itemprop="name" content="kailash's Portfolio">
+<meta itemprop="description" content="Welcome to my portfolio website. I am a full stcak  web developer, game developer, and software engineer, as a web-developer i am specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+  <link rel="stylesheet" href="style.css"  />
+    <script src="script.js" defer></script>
+
+    
+    <title>kailash's Portfolio</title>
+  </head>
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+         
+          <h1 class="h1">
+            <span>Hi, I'm kailash</span>
+            <span>Full stack web, game and app developer </span>
+          </h1>
+          <p class="header-text">
+            As a full stack web, game, and app developer, I possess versatile expertise across both frontend and backend technologies. I am adept at designing and implementing interactive user experiences for a wide range of applications including web applications, games, and mobile apps.
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+   <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">My Work</h2>
+          <div class="work-boxes">
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Zombie FPS</h3>
+                <p class="work-text">
+                 Players must survive waves of undead creatures while strategically managing their resources and exploring eerie environments.
+                </p>
+                <ol class="work-technologies">
+                  <li>Unity Engines</li>
+                  <li>C#</li>
+               </ol>
+
+                <div class="work-links">
+                 
+                  <a href="https://github.com/kailzxh/Zombie-FPS-game-using-unityengine" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                  <a
+                    href="https://github.com/kailzxh/Zombie-FPS-game-using-unityengine"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+
+         
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/Zombie FPS.png"
+                  alt="Zombiefps"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+               
+                <h3 class="h3">Sri balaji packers and movers</h3>
+               <p class="work-text">Website for packers and movers.</p>
+                <ol class="work-technologies">
+                  <li>HTML, CSS, Js</li>
+                  <li>Node.js</li>
+                  <li>PostgreSql</li>
+                </ol>
+                <div class="work-links">
+                  
+                  <a href="https://kailzxh.github.io/sribalajipackers/" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                  <a
+                    href="https://github.com/kailzxh/sribalajipackers"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/sri balaji packers and movers.png"
+                  alt="balajipackersandmovers"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                
+                <h3 class="h3">Flutter application</h3>
+                
+                <p class="work-text">
+                  not yet finished
+                </p>
+                <ol class="work-technologies">
+                  <li>flutter</li>
+                  <li>dart</li>
+                  <li>android studio</li>
+                </ol>
+                <div class="work-links">
+                  
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                   
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src=""
+                  alt=""
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+ <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+                <img src="assets/images/skills/flutter.png" alt="Flutter" class="skills-img" loading="lazy" title="Svelte">
+                 <img src="assets/images/skills/download.png" alt="PostgreSql" class="skills-img" loading="lazy" title="Typescript">
+                 <img src="assets/images/skills/unity.png" alt="Unity Engines" class="skills-img" loading="lazy" title="Web Accessibility">
+                 <img src="assets/images/skills/css.jpg" alt="C# scripts" class="skills-img" loading="lazy" title="Shell">
+                 <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+                 <img src="assets/images/skills/dart.png" alt="Dart" class="skills-img" loading="lazy" title="Graph QL">
+                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              
+            
+            </div>
+            <!-- <form name="contact" class="contact-form" netlify >
+              
+              
+              
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <div data-netlify-recaptcha="true">
+               
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form> -->
+            
+            <form name="contact" data-netlify="true" class="contact-form"  netlify>
+              <input type="hidden" name="Send Message" value="contact" />
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/kailzxh?tab=overview&from=2024-07-01&to=2024-07-12" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Codepen" href="https://codepen.io/Kailash-Godara" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/codepen.svg"
+                    alt="Codepen"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/kailzxh" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://x.com/kailzxh" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> - designed & developed by <a target="_blank" rel="noopener" href="https://github.com/kailzxh?tab=overview&from=2024-07-01&to=2024-07-12">Kailash</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
