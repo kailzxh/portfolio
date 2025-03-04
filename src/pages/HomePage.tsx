@@ -4,6 +4,7 @@ import WorkSection from '../components/WorkSection';
 import SkillsSection from '../components/SkillsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import ActivityTracker from '../components/stats';
 
 const HomePage: React.FC = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const HomePage: React.FC = () => {
     <>
       <Header />
       <main>
+        <ActivityTracker/>
         <WorkSection />
         <SkillsSection />
         <ContactSection />
