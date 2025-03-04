@@ -22,7 +22,7 @@ const Header: React.FC = () => {
 
       <Navigation isOpen={isNavOpen} onClose={toggleNav} />
 
-      <div className="container">
+      <div id="home" className="container">
         <div className="header-textbox">
           <h1 className="h1">
             <span>Hi, I'm kailash</span>

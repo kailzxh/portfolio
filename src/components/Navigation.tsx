@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 interface NavigationProps {
   isOpen: boolean;
@@ -20,18 +19,34 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
-  const handleLinkClick = () => {
-    onClose();
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    onClose(); // Close the navigation menu after clicking
   };
 
   return (
     <nav className={`nav ${isOpen ? '' : 'hidden'}`}>
       <ol className="nav-items">
-        <li className="nav-item"><Link to="#" onClick={handleLinkClick}>Home</Link></li>
-        <li className="nav-item"><Link to="#work" onClick={handleLinkClick}>My Work</Link></li>
-        <li className="nav-item"><Link to="#skills" onClick={handleLinkClick}>My Skills</Link></li>
         <li className="nav-item">
-          <Link to="#contact" data-focused="last-focused" onClick={handleLinkClick}>Contact</Link>
+          <a href="#home" onClick={(e) => handleLinkClick(e, "home")}>Home</a>
+        </li>
+        <li className="nav-item">
+          <a href="#coding-activity" onClick={(e) => handleLinkClick(e, "coding-activity")}>My Coding Activity</a>
+        </li>
+        <li className="nav-item">
+          <a href="#work" onClick={(e) => handleLinkClick(e, "work")}>My Work</a>
+        </li>
+        <li className="nav-item">
+          <a href="#skills" onClick={(e) => handleLinkClick(e, "skills")}>My Skills</a>
+        </li>
+        <li className="nav-item">
+          <a href="#contact" data-focused="last-focused" onClick={(e) => handleLinkClick(e, "contact")}>Contact</a>
         </li>
       </ol>
     </nav>
