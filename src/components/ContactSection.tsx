@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
           
-          <form name="contact" className="contact-form" data-netlify="true" onSubmit={handleSubmit} netlify>
+          <form name="contact" className="contact-form" netlify  onSubmit={handleSubmit} >
             {/* The hidden input below is required so Netlify can detect this form */}
             <input type="hidden" name="form-name" value="contact" />
   
