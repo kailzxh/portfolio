@@ -44,7 +44,8 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
           
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form name="contact" className="contact-form"  data-netlify="true" onSubmit={handleSubmit} >
+          <input type="hidden" name="Send Message" value="contact" />
             <div className="form-field">
               <label htmlFor="name">Name</label>
               <input 
