@@ -44,9 +44,9 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
           
-          <form name="contact" className="contact-form" netlify >
+          <form name="contact"  data-netlify="true" className="contact-form" netlify >
             {/* The hidden input below is required so Netlify can detect this form */}
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="Send Message" value="contact" />
   
             <div className="form-field">
               <label htmlFor="name">Name</label>
