@@ -44,43 +44,48 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
           
-          <form name="contact" className="contact-form"  data-netlify="true" onSubmit={handleSubmit} >
-          <input type="hidden" name="Send Message" value="contact" />
-            <div className="form-field">
-              <label htmlFor="name">Name</label>
-              <input 
-                type="text" 
-                name="name" 
-                id="name" 
-                required 
-                value={formData.name}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-field">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                inputMode="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-field">
-              <label htmlFor="message">How can I help you?</label>
-              <textarea 
-                name="message" 
-                id="message" 
-                required
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
-            </div>
-            <button type="submit" className="btn btn-cta">Send</button>
-          </form>
+          <form name="contact" className="contact-form" data-netlify="true" onSubmit={handleSubmit}>
+  <input type="hidden" name="contact" value="contact" />
+  
+  <div className="form-field">
+    <label htmlFor="name">Name</label>
+    <input 
+      type="text" 
+      name="name" 
+      id="name" 
+      required 
+      value={formData.name}
+      onChange={handleChange}
+    />
+  </div>
+
+  <div className="form-field">
+    <label htmlFor="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+      inputMode="email"
+      value={formData.email}
+      onChange={handleChange}
+    />
+  </div>
+
+  <div className="form-field">
+    <label htmlFor="message">How can I help you?</label>
+    <textarea 
+      name="message" 
+      id="message" 
+      required
+      value={formData.message}
+      onChange={handleChange}
+    ></textarea>
+  </div>
+
+  <button type="submit" className="btn btn-cta">Send</button>
+</form>
+
         </div>
       </div>
     </section>
