@@ -47,8 +47,8 @@ const ContactSection: React.FC = () => {
             className="contact-form"
             netlify
           >
-            {/* Hidden input required for Netlify form detection */}
-            <input type="hidden" name="contact" value="contact" />
+           
+            
 
             <div className="form-field">
               <label htmlFor="name">Name</label>
