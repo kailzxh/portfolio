@@ -41,9 +41,7 @@ const ContactSection: React.FC = () => {
           
           <form
             name="contact"
-            method="post"
-           
-            onSubmit={handleSubmit}
+            
             className="contact-form"
             netlify
           >
