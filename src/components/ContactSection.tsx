@@ -16,6 +16,22 @@ const ContactSection = () => {
 
   const navigate = useNavigate();
 
+  // Add hidden HTML form for Netlify build-time detection
+  const HiddenNetlifyForm = () => (
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      style={{ display: 'none' }}
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="name" type="text" />
+      <input name="email" type="email" />
+      <textarea name="message"></textarea>
+    </form>
+  );
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -24,15 +40,15 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    const formDataWithFormName = new URLSearchParams({
+    const formDataWithMeta = {
+      ...formData,
       'form-name': 'contact',
-      ...formData
-    }).toString();
+    };
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: formDataWithFormName
+      body: new URLSearchParams(formDataWithMeta).toString()
     })
       .then(() => navigate("/thank-you/"))
       .catch((error) => alert(error));
@@ -53,6 +69,10 @@ const ContactSection = () => {
             </p>
           </div>
 
+          {/* Hidden Netlify Form */}
+          <HiddenNetlifyForm />
+
+          {/* Visible Form */}
           <form
             name="contact"
             method="post"
