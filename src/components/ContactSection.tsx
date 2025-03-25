@@ -39,7 +39,7 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
           
-          <form
+          {/* <form
             name="contact"
             
             className="contact-form"
@@ -85,7 +85,18 @@ const ContactSection: React.FC = () => {
             </div>
 
             <button type="submit" className="btn btn-cta">Send</button>
-          </form>
+          </form> */}
+          <form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
   
         </div>
       </div>
