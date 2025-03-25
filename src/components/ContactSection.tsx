@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // or from 'gatsby' if using Gatsby
 
 interface FormData {
   name: string;
@@ -6,22 +7,35 @@ interface FormData {
   message: string;
 }
 
-const ContactSection: React.FC = () => {
+const ContactSection = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: ""
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Defined to let the form submit naturally without interference.
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // No preventDefault() so that the default submission happens
-    // and Netlify can process the form submission.
+    e.preventDefault();
+    
+    const formDataWithFormName = new URLSearchParams({
+      'form-name': 'contact',
+      ...formData
+    }).toString();
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formDataWithFormName
+    })
+      .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -38,16 +52,16 @@ const ContactSection: React.FC = () => {
               As a software engineer, I construct web interfaces and design systems with a special love for accessibility and performance. I tend to code things from scratch and enjoy bringing ideas to life.
             </p>
           </div>
-          
-          {/* <form
-            name="contact"
-            
-            className="contact-form"
-            netlify
-          >
-           
-            
 
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+            className="contact-form"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            
             <div className="form-field">
               <label htmlFor="name">Name</label>
               <input 
@@ -85,19 +99,7 @@ const ContactSection: React.FC = () => {
             </div>
 
             <button type="submit" className="btn btn-cta">Send</button>
-          </form> */}
-          <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-  
+          </form>
         </div>
       </div>
     </section>
