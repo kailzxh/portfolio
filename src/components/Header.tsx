@@ -24,13 +24,13 @@ const Header: React.FC = () => {
 
       <div id="home" className="container">
         <div className="header-textbox">
-          <h1 className="h1">
-            <span>Hi, I'm kailash</span>
-            <span>Full stack web, game and app developer </span>
-          </h1>
-          <p className="header-text">
-            As a full stack web, game, and app developer, I possess versatile expertise across both frontend and backend technologies. I am adept at designing and implementing interactive user experiences for a wide range of applications including web applications, games, and mobile apps.
-          </p>
+        <h1 className="h1">
+          <span>Hey there! I'm Kailash 👋</span>
+          <span className="rainbow-text">Coding Wizard • Professional Problem Creator (whoops, solver!)</span>
+        </h1>
+        <p className="header-text">
+          I'm a Swiss Army knife developer who can't decide between web, apps, games, or blockchain - so I build them all! 🚀 Whether I'm crafting pixel-perfect interfaces users actually enjoy, or wrestling with backend dragons to protect your precious data, I turn caffeine into clean code and wild ideas into working tech. Bonus: I speak fluent JavaScript, Java, and Blockchain-ese (still working on my human language skills!).
+        </p>
 
           <div className="header-btns">
             <Link to="#contact" className="btn btn-cta">Hire me</Link>
